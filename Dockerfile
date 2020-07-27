@@ -9,7 +9,7 @@
 # ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 # stage: 1
-FROM node:latest as react-build
+FROM nodejs:12 as react-build
 LABEL stage=builder
 WORKDIR /app
 COPY . ./
